@@ -1,3 +1,12 @@
+<?php
+require 'config/Config.php';
+
+$sql = $con->prepare("SELECT * FROM pedidos");
+    $sql->execute();
+    $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+
 <div class="container">
 
 <div class="sectionLeft">
@@ -11,34 +20,20 @@
 <div class="sectionRight">
     <h2>Últimos Pedidos</h2>
     <div class="lastRequest">
+
+    <?php 
+        foreach ($results as $result) {
+    ?>
         <div class="lastRequestContent">
-            <p>Solicitação Pedidos</p>
-            <p>SESMT</p>
-            <p>Prédio Particular</p>
-            <p>15:47</p>
+            <p><?= $result['titulo'] ?></p>
+            <p><?=$result['departamento']?></p>
+            <p><?= $result['local_request'] ?></p>
+            <p><?= $result['hora_inicial'] ?></p>
             <div class="buttonAction">
-                <a href="#" class="selectRequest">Selecionar</a>
+                <a href="?aba=selecionapedidos&id=<?= $result['id']?>" class="selectRequest">Selecionar</a>
             </div>
         </div>
-        <div class="lastRequestContent">
-            <p>Solicitação Pedidos</p>
-            <p>SESMT</p>
-            <p>Prédio Particular</p>
-            <p>15:47</p>
-            <div class="buttonAction">
-                <a href="#" class="selectRequest">Selecionar</a>
-            </div>
-        </div>
-        <div class="lastRequestContent">
-            <p>Solicitação Pedidos</p>
-            <p>SESMT</p>
-            <p>Prédio Particular</p>
-            <p>15:47</p>
-            <div class="buttonAction">
-                <a href="#" class="selectRequest">Selecionar</a>
-            </div>
-        </div>
-    </div>
+     <?php } ?>
 </div>
 
 </div>

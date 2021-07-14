@@ -390,41 +390,108 @@ td{
 }
 
 
-.modal{
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
+/* MSG SUCESSO */
+.msgSuccess{
+    width: 50%;
+    margin: 0 auto;
+    background: var(--bg-btnsuccess);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    border-radius: 5px;
 }
 
-.modalContent{
+.msgSuccess p{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 0.7em;
+    cursor: pointer;
+}
+
+/*MSG ERROR*/
+.msgError{
+    width: 100%;
+    margin: 0 auto;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    border-radius: 5px;
+}
+
+/*RELATORIO*/
+.relHeader{
+    width: 100%;
+    position: relative;
+}
+
+
+.relHeader h1{
+    text-align: center;
+    padding-top: 40px;
+}
+
+.initialBody{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+}
+.initialBody p{
+    border-bottom: 1px solid #ccc;
+}
+
+.sectionRelBody{
+    width: 100%;
+    padding: 10px;
+    position: relative;
+}
+
+.sectionRelBody div{
+    width: 50%;
+    float: left;
+    margin: 0 50px 0 0;
+}
+.sectionRelBody p{
     width: 90%;
-    background: #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.sectionBody{
+    width: 100%;
+    padding: 10px;
+}
+
+.sectionBodyContent{
+    width: 50%;
+    float: left;
+}
+
+.sectionBodyContent p{
+    width: 90%;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.footerRel{
+    width: 100%;
+    padding: 10px;
+}
+
+.footerRel p{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
     padding: 10px;
 }
 
 
-
-.modalContent .btnDeleteRequest,
-.modalContent .btnEditRequest,
-.modalContent .btnAddRequest{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10%;
-    margin-left: 10px;
-}
-
-.modalContent .btnDeleteRequest span,
-.modalContent .btnEditRequest span,
-.modalContent .btnAddRequest span{
-    margin-right: 5px;
-}
 
 
 

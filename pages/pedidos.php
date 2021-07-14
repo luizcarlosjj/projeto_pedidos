@@ -1,10 +1,20 @@
+
+
 <div class="requestLink">
     <a  href="?aba=home"><span class="material-icons">west</span></a>
 </div>
 <div class="containerRequest">
+
+<?php if (isset($_GET['msg'])){
+    if($_GET['msg'] === 'success') {?>    
+    <div class="msgSuccess">
+                <p class="closeMsg">X</p>
+                <h3>Cadastro realizado com sucesso!</h3>
+            </div>
+<?php  }}?>
+
     <div class="requestContent">
         <h2>Pedidos</h2>
-
         <form method="POST" action="actions/addPedido.php" class="formRequest">
             <div class="formRequestContent">
                 <div class="formRequestFirst">
@@ -33,17 +43,17 @@
                     <div class="formRequestFirstItem">
                         <p>Local</p>
                         <span class="material-icons iconForm">local_library</span>
-                        <input type="text" name="local" id="local" placeholder="Digite o local">
+                        <input type="text" name="localRequest" id="localRequest" placeholder="Digite o local">
                     </div>
                     <div class="formRequestFirstItem">
                         <p>Data Inicial</p>
                         <span class="material-icons iconForm">calendar_today</span>
-                        <input type="text" class="date" name="data_initial" id="data_initial" placeholder="00/00/0000" maxlength="10">
+                        <input type="date" class="date" name="data_initial" id="data_initial" placeholder="00/00/0000" maxlength="10">
                     </div>
                     <div class="formRequestFirstItem">
                         <p>Data Final</p>
                         <span class="material-icons iconForm">calendar_today</span>
-                        <input type="text" class="date" name="data_final" id="data_final" placeholder="00/00/0000" maxlength="10">
+                        <input type="date" class="date" name="data_final" id="data_final" placeholder="00/00/0000" maxlength="10">
                     </div>
 
                     <div class="formRequestFirstItem">

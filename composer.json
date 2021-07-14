@@ -1,0 +1,11 @@
+{
+    "name": "projeto/pedidos",
+    "autoload": {
+        "psr-4": {
+            "class\\": "class/"
+        }
+    },
+    "require": {
+        "mpdf/mpdf": "^8.0"
+    }
+}

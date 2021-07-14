@@ -23,7 +23,13 @@ menuMobile.addEventListener('click', showMenuMobile)
 
 $(document).ready(function(){
     $('#tel').mask('(00)00000-0000')
-    $('.date').mask('00/00/0000')
     $('#hour_initial').mask('00:00')
     $('#hour_final').mask('00:00')
+
+
+    $('.closeMsg').on('click', function(){
+        $('.msgSuccess').fadeOut(300)
+    })
+
+
 })

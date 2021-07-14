@@ -1,6 +1,6 @@
 <?php
 
-const DBNAME = 'pedidos';
+const DBNAME = 'projeto_pedidos';
 const HOST = 'localhost';
 const USER = 'root';
 const PASSWD = '';
